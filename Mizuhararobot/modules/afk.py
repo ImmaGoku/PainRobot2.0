@@ -58,14 +58,17 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} is here!",
-                "{} is back with a bang!",
-                "{} is now in the chat after all things over!",
-                "{} is awake!",
-                "{} is back online!",
-                "{} is finally here!",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
+                "{} Is wasting his time in the chat!",
+                "The Dead {} Came Back From His Grave!",
+                "We thought we lost you {}",
+                "Welcome Back {} now pay $100 to Get freedom or get banned!",
+                "{} Good job waking up now get ready for your classes!",
+                "Hey,{}! Why weren't you online for such a long time?",
+                "{} why did you came back?",
+                "Ah shit, here we go again",
+                "Oh no! not you again",
+                "Welcome to hell again {}",
+                "Mission failed successfully {}",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
