@@ -290,26 +290,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'God'."
+        text += "\n\nThe Disaster level of this person is 'Founding Titan'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Rental Association'."
+        text += "\n\nThis user is member of 'Ackerman Clan'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Dragon'."
+        text += "\n\nThe Disaster level of this person is 'Titan Shifter'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Demon'."
+        text += "\n\nThe Disaster level of this person is 'Royal Blood'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Tiger'."
+        text += "\n\nThe Disaster level of this person is 'Scout'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Wolf'."
+        text += "\n\nThe Disaster level of this person is 'Garrison'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/chizuruupdates/19">?</a>]'.format(bot.username)
+        text += ' [<a href="https://t.me/foundingtitanupdates/12">?</a>]'.format(bot.username)
 
     try:
         user_member = chat.get_member(user.id)
