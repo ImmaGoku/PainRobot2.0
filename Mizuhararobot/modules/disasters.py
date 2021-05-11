@@ -504,7 +504,7 @@ def supportlist(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def hokages(update: Update, context: CallbackContext):
+def sudolist(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
     reply = "<b>Known Hokages:</b>\n"
@@ -520,7 +520,7 @@ def hokages(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def akatsukis(update: Update, context: CallbackContext):
+def devlist(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
     reply = "<b>Akatsuki Organization Members:</b>\n"
