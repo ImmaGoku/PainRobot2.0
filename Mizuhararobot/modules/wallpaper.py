@@ -6,7 +6,7 @@ from Mizuhararobot.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
-# Wallpapers module is powered by wall.alphacoders.com
+# Wallpapers module is powered by Wallpaper Abyss (wall.alphacoders.com)
 
 
 @run_async
