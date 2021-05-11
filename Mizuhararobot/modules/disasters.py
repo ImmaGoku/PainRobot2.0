@@ -72,16 +72,16 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Hokage")
+        message.reply_text("This member is already an Asura Path")
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested AO to promote a Uzumaki to Hokage."
+        rt += "Requested AO to promote The Human Path to an Asura Path."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested AO to promote a Villager to Hokage."
+        rt += "Requested AO to promote The Nataka Path to an Asura Path."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -93,7 +93,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt
-        + "\nSuccessfully set Role level of {} to Hokage!".format(
+        + "\nSuccessfully set Role level of {} to Asura Path!".format(
             user_member.first_name
         )
     )
@@ -134,16 +134,16 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested AO to deomote this Hokage to Uzumaki"
+        rt += "Requested AO to deomote This Asura Path to Human Path."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Uzumaki.")
+        message.reply_text("This user is already a Human Path.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested AO to promote this Villager to Uzumaki"
+        rt += "Requested AO to promote this Naraka Path to Human Path"
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -190,17 +190,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Hokage, Demoting to Villager."
+        rt += "This member is an Asura Path, Demoting to Naraka Path."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already an Uzumaki, Demoting to Villager."
+        rt += "This user is already a Human Path, Demoting to Naraka Path."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Villager.")
+        message.reply_text("This user is already a Naraka Path.")
         return ""
 
     data["whitelists"].append(user_id)
@@ -210,7 +210,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to a Villager!"
+        rt + f"\nSuccessfully promoted {user_member.first_name} to a Naraka Path!"
     )
 
     log_message = (
@@ -246,22 +246,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Dragon Disaster, Demoting to Tiger."
+        rt += "This member is an Asura Path, Demoting to Preta Path."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Demon Disaster, Demoting to Tiger."
+        rt += "This user is already a Human Path, Demoting to Preta Path."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a Wolf Disaster, Demoting to Tiger."
+        rt += "This user is a Naraka Path, Promoting to Preta Path."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already an Uchiha.")
+        message.reply_text("This user is already a Preta Path.")
         return ""
 
     data["tigers"].append(user_id)
@@ -304,7 +304,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested AO to demote this user to Outsider")
+        message.reply_text("Requested AO to demote this user to normal user.")
         DRAGONS.remove(user_id)
         data["sudos"].remove(user_id)
 
@@ -325,7 +325,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Hokage!")
+        message.reply_text("This user is not an Asura Path!")
         return ""
 
 
@@ -347,7 +347,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested AO to demote this user to Outsider")
+        message.reply_text("Requested AO to demote this user to normal user")
         DEMONS.remove(user_id)
         data["supports"].remove(user_id)
 
@@ -368,7 +368,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Hokage!")
+        message.reply_text("This user is not a Human Path!")
         return ""
 
 
@@ -390,7 +390,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in WOLVES:
-        message.reply_text("Demoting to Outsider")
+        message.reply_text("Demoting to normal user")
         WOLVES.remove(user_id)
         data["whitelists"].remove(user_id)
 
@@ -410,7 +410,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Wolf Disaster!")
+        message.reply_text("This user is not a Naraka!")
         return ""
 
 
@@ -432,7 +432,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in TIGERS:
-        message.reply_text("Demoting to Outsider")
+        message.reply_text("Demoting to normal user")
         TIGERS.remove(user_id)
         data["tigers"].remove(user_id)
 
@@ -452,14 +452,14 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not an Uchiha!")
+        message.reply_text("This user is not a Preta Path!")
         return ""
 
 
 @run_async
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Villagers:</b>\n"
+    reply = "<b>Known Naraka Paths:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
         user_id = int(each_user)
@@ -475,7 +475,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Uchihas:</b>\n"
+    reply = "<b>Known Preta Paths:</b>\n"
     bot = context.bot
     for each_user in TIGERS:
         user_id = int(each_user)
@@ -491,7 +491,7 @@ def tigerlist(update: Update, context: CallbackContext):
 @whitelist_plus
 def supportlist(update: Update, context: CallbackContext):
     bot = context.bot
-    reply = "<b>Known Uzumakis:</b>\n"
+    reply = "<b>Known Human Paths:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -507,7 +507,7 @@ def supportlist(update: Update, context: CallbackContext):
 def sudolist(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Hokages:</b>\n"
+    reply = "<b>Known Asura Paths:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -540,11 +540,11 @@ Commands listed here only work for users with special access are mainly used for
 Group admins/group owners do not need these commands. 
 
  ╔ *List all special users:*
- ╠ `/sudolist`*:* Lists all Hokage members
- ╠ `/supportlist`*:* Lists all Uzumaki members
- ╠ `/tigerlist`*:* Lists all Uchiha members
- ╠ `/whitelistlist`*:* Lists all Villager members
- ╚ `/devlist`*:* Lists all Akatsuki Organization members
+ ╠ `/sudolist`*:* Lists all Asura Paths
+ ╠ `/supportlist`*:* Lists all Human Paths
+ ╠ `/tigerlist`*:* Lists all Preta Paths
+ ╠ `/whitelistlist`*:* Lists all Naraka Paths
+ ╚ `/devlist`*:* Lists all Animal Paths
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
