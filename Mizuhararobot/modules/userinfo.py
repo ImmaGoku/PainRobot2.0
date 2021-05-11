@@ -290,22 +290,22 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Path level of this person is 'Deva'."
+        text += "\n\nThe Path level of this person is 'Deva Path'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis Path is member of 'Animal/Akatsuki Organization'."
+        text += "\n\nThis user is a member of 'Animal Path/Akatsuki Organization'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Path level of this person is 'Asura'."
+        text += "\n\nThe Path level of this person is 'Asura Path'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Path level of this person is 'Human'."
+        text += "\n\nThe Path level of this person is 'Human Path'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Path level of this person is 'Preta'."
+        text += "\n\nThe Path level of this person is 'Preta Path'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Path level of this person is 'Naraka'."
+        text += "\n\nThe Path level of this person is 'Naraka Path'."
         disaster_level_present = True
 
     if disaster_level_present:
