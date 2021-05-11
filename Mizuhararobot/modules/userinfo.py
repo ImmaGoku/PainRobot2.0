@@ -290,22 +290,22 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Role level of this person is 'Pain'."
+        text += "\n\nThe Role level of this person is 'Deva'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Akatsuki Organization'."
+        text += "\n\nThis user is member of 'Animal/Akatsuki Organization'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Role level of this person is 'Hokage'."
+        text += "\n\nThe Role level of this person is 'Asura'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Role level of this person is 'Uzumaki'."
+        text += "\n\nThe Role level of this person is 'Human'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Role level of this person is 'Uchiha'."
+        text += "\n\nThe Role level of this person is 'Preta'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Role level of this person is 'Villager'."
+        text += "\n\nThe Role level of this person is 'Naraka'."
         disaster_level_present = True
 
     if disaster_level_present:
