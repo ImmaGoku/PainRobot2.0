@@ -540,11 +540,11 @@ Commands listed here only work for users with special access are mainly used for
 Group admins/group owners do not need these commands. 
 
  ╔ *List all special users:*
- ╠ `/dragons`*:* Lists all Dragon disasters
- ╠ `/demons`*:* Lists all Demon disasters
- ╠ `/tigers`*:* Lists all Tigers disasters
- ╠ `/wolves`*:* Lists all Wolf disasters
- ╚ `/renters`*:* Lists all Akatsuki Organization members
+ ╠ `/sudolist`*:* Lists all Hokage members
+ ╠ `/supportlist`*:* Lists all Uzumaki members
+ ╠ `/tigerlist`*:* Lists all Uchiha members
+ ╠ `/whitelistlist`*:* Lists all Villager members
+ ╚ `/devlist`*:* Lists all Akatsuki Organization members
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
