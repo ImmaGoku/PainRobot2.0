@@ -28,7 +28,7 @@ Built by weebs for weebs, I specialize in managing anime eccentric communities,D
 """
 
 
-BOT_IMG = "https://telegra.ph/file/9127957b0437ed3a64332.jpg"
+BOT_IMG = "https://telegra.ph/file/75aed4e9f47b3ea45c962.mp4"
 
 
 
