@@ -110,12 +110,12 @@ def gban(update: Update, context: CallbackContext):
         return
 
     if int(user_id) in TIGERS:
-        message.reply_text("That's an Uchiha! He cannot be banned!"
+        message.reply_text("That's a Preta Path! He cannot be banned!"
         )
         return
 
     if int(user_id) in WOLVES:
-        message.reply_text("That's a Villager! He cannot be banned!"
+        message.reply_text("That's a Naraka Path! He cannot be banned!"
         )
         return
 
