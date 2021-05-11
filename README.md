@@ -4,12 +4,12 @@
 
 A Telegram Python bot running on python3 forked with saitama with a sqlalchemy database and an entirely themed persona to make chizuru fun and good management for you in your groups.
 
-Can be found on telegram as [Eren Jaeger Robot](https://t.me/FoundingTitanRobot).
+Can be found on telegram as [PainRobot](https://t.me/PainAkatsukiRobot).
 
-The Support group can be reached out to at [Founding Titan Support](https://t.me/foundingtitansupport), where you can ask for help , discover new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to [PainRobot Support](https://t.me/PainRobotSupport), where you can ask for help , discover new features, report bugs, and stay in the loop whenever a new update is available. 
 
 
-News channel as at [Founding Titan Updates](https://t.me/foundingtitanupdates)
+News channel as at [PainRobot Updates](https://t.me/PainRobotUpdates)
 
 ## How to setup/deploy.
 
@@ -55,8 +55,8 @@ An example `config.py` file could be:
 from Mizuhararobot.sample_config import Config
 
 class Development(Config):
-    OWNER_ID = 254318997  # your telegram ID
-    OWNER_USERNAME = "SonOfLars"  # your telegram username
+    OWNER_ID = 684592916  # your telegram ID
+    OWNER_USERNAME = "PAIN7177"  # your telegram username
     API_KEY = "your bot api key"  # your api key, as provided by the @botfather
     SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
     JOIN_LOGGER = '-1234567890' # some group chat that your bot is a member of
