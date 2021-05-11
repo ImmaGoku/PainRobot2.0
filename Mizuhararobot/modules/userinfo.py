@@ -240,7 +240,7 @@ def info(update: Update, context: CallbackContext):
         return
 
     rep = message.reply_text(
-        "<code>Accessing Rent list...</code>", parse_mode=ParseMode.HTML
+        "<code>Accessing The World list...</code>", parse_mode=ParseMode.HTML
     )
 
     text = (
@@ -290,26 +290,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'Founding Titan'."
+        text += "\n\nThe Role level of this person is 'Pain'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Ackerman Clan'."
+        text += "\n\nThis user is member of 'Akatsuki Organization'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Titan Shifter'."
+        text += "\n\nThe Role level of this person is 'Hokage'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Royal Blood'."
+        text += "\n\nThe Role level of this person is 'Uzumaki'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Scout'."
+        text += "\n\nThe Role level of this person is 'Uchiha'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Garrison'."
+        text += "\n\nThe Role level of this person is 'Villager'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/foundingtitanupdates/12">?</a>]'.format(bot.username)
+        text += ' [<a href="https://t.me/NagatoUzumakiRobotUpdates/6">?</a>]'.format(bot.username)
 
     try:
         user_member = chat.get_member(user.id)
