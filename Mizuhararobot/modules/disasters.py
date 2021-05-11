@@ -81,7 +81,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested AO to promote The Nataka Path to an Asura Path."
+        rt += "Requested AO to promote The Naraka Path to an Asura Path."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -154,7 +154,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as an Uzumaki!"
+        rt + f"\n{user_member.first_name} was added as a Human Path!"
     )
 
     log_message = (
@@ -271,7 +271,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to an Uchiha!"
+        rt + f"\nSuccessfully promoted {user_member.first_name} to an Preta Path!"
     )
 
     log_message = (
@@ -410,7 +410,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Naraka!")
+        message.reply_text("This user is not a Naraka Path!")
         return ""
 
 
