@@ -240,11 +240,11 @@ def info(update: Update, context: CallbackContext):
         return
 
     rep = message.reply_text(
-        "<code>Accessing The World list...</code>", parse_mode=ParseMode.HTML
+        "<code>Hacking Into FBI Database...</code>", parse_mode=ParseMode.HTML
     )
 
     text = (
-        f"╒═══「<b> Appraisal results:</b> 」\n"
+        f"╒═══「<b> Data Found In FBI Database:</b> 」\n"
         f"ID: <code>{user.id}</code>\n"
         f"First Name: {html.escape(user.first_name)}"
     )
