@@ -58,17 +58,17 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} Is wasting his time in the chat!",
-                "The Dead {} Came Back From His Grave!",
-                "We thought we lost you {}",
-                "Welcome Back {} now pay $100 to Get freedom or get banned!",
+                "{}'s Mom! {} Is wasting his time in the chat again!",
+                "Dead {} Came Back From His Grave!",
+                "We thought that we lost you, {}",
+                "Welcome Back {} now pay $1000 to Get freedom or get banned!",
                 "{} Good job waking up now get ready for your classes!",
                 "Hey,{}! Why weren't you online for such a long time?",
-                "{} why did you came back?",
-                "Ah shit, here we go again",
-                "Oh no! not you again",
-                "Welcome to hell again {}",
-                "Mission failed successfully {}",
+                "{}, why did you came back?",
+                "Ah shit, here we go again with {}",
+                "Oh no! not you again, {}",
+                "Welcome to hell chat again, {}",
+                "Mission passed unsuccessfully, {}",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -139,12 +139,12 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if not user.reason:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk".format(fst_name)
+            res = "{} is dead".format(fst_name)
             update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk.\nReason: <code>{}</code>".format(
+            res = "{} is dead.\nReason: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
