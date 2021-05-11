@@ -22,24 +22,26 @@ from Mizuhararobot.modules.helper_funcs.alternate import typing_action
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am chizuru ichinose a group manager bot.Rent me for your group if you want😃😃.
-You can find my list of available commands with /help.
+Hello,Telegram User {}, I'm {}!
+I am an Anime themed group management bot.
+Built by weebs for weebs, I specialize in managing anime eccentric communities,Do /help to see all commands!
 """
 
 
-BOT_IMG = "https://telegra.ph/file/eee3cb7efa205ca5b1262.mp4"
+BOT_IMG = "https://telegra.ph/file/9127957b0437ed3a64332.jpg"
 
 
 
 
 HELP_STRINGS = """
-Hello I'm  mizuhara from rent a girlfriend. Rent me for your grp to have fun there.You can have a look at the following for an idea of some of \
+Hello there! My name is *{}*.
+I am a bot that wants You To Know That Those Who Do Not Understand True Pain Can Never Understand True Peace. I help admins manage their groups with Shinra Tensei! Have a look at the following for an idea of some of \
 the things I can help you with.
 
-*Main* commands available:[:.:](https://telegra.ph/file/8fbc5858ddd7eefe2fccf.jpg)
+*Main* commands available:
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
+ • /donate: information on how to donate!
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
@@ -152,28 +154,28 @@ def start(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕️Add mizuhara to your group",
+                            text="Add Pain To Your Group",
                             url="t.me/{}?startgroup=true".format(context.bot.username))
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Support Chat ",
-                            url="https://t.me/chizurusupport"),
+                            text="Support Chat",
+                            url="https://t.me/PainRobotSupport"),
                         InlineKeyboardButton(
                             text="📍Updates ",
-                            url="https://t.me/chizuruupdates")
+                            url="https://t.me/PainRobotUpdates")
                     ],
                     [
                         InlineKeyboardButton(
                             text="help",
-                            url="https://t.me/Chizurumanagementbot?start=help")
+                            url="https://t.me/PainAkatsukiRobot?start=help")
                     ]]))
 
 
 
 
     else:
-        update.effective_message.reply_text("Heya, my name is mizuhara")
+        update.effective_message.reply_text("Hey, My Name Is Pain")
 
 
 
