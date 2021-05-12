@@ -368,7 +368,7 @@ def stemp_ban(update: Update, context: CallbackContext) -> str:
 @user_admin
 @user_can_ban
 @loggable
-def kick(update: Update, context: CallbackContext) -> str:
+def almightypush(update: Update, context: CallbackContext) -> str:
     chat = update.effective_chat
     user = update.effective_user
     message = update.effective_message
@@ -591,7 +591,7 @@ __help__ = """
  ~ `/tban <userhandle> x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
  ~ `/stban <userhandle> x(m/h/d)`*:* silently bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
  ~ `/unban <userhandle>`*:* unbans a user. (via handle, or reply)
- ~ `/kick <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
+ ~ `/almightypush <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
  ~ `/skick <userhandle>`*:* silently kicks a user out of the group, (via handle, or reply)
 """
 
@@ -599,7 +599,7 @@ BAN_HANDLER = CommandHandler("ban", ban)
 SBAN_HANDLER = CommandHandler("sban", sban)
 TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban)
 STEMPBAN_HANDLER = CommandHandler(["stban"], stemp_ban)
-KICK_HANDLER = CommandHandler("kick", kick)
+ALMIGHTYPUSH_HANDLER = CommandHandler("almightypush", almightypush)
 SKICK_HANDLER = CommandHandler("skick", skick)
 UNBAN_HANDLER = CommandHandler("unban", unban)
 ROAR_HANDLER = CommandHandler("roar", selfunban)
@@ -609,7 +609,7 @@ dispatcher.add_handler(BAN_HANDLER)
 dispatcher.add_handler(SBAN_HANDLER)
 dispatcher.add_handler(TEMPBAN_HANDLER)
 dispatcher.add_handler(STEMPBAN_HANDLER)
-dispatcher.add_handler(KICK_HANDLER)
+dispatcher.add_handler(ALMIGHTYPUSH_HANDLER)
 dispatcher.add_handler(SKICK_HANDLER)
 dispatcher.add_handler(UNBAN_HANDLER)
 dispatcher.add_handler(ROAR_HANDLER)
@@ -621,7 +621,7 @@ __handlers__ = [
     SBAN_HANDLER, 
     TEMPBAN_HANDLER,
     STEMPBAN_HANDLER, 
-    KICK_HANDLER,
+    AlMIGHTYPUSH_HANDLER,
     SKICK_HANDLER, 
     UNBAN_HANDLER,
     ROAR_HANDLER,
